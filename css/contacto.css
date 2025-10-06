@@ -12,6 +12,8 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .formcontacto label {
@@ -23,7 +25,7 @@
 
 .formcontacto input,
 .formcontacto textarea {
-  width: 100%;
+  /*width: 100%;*/
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
