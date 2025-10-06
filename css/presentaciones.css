@@ -1,0 +1,12 @@
+.volverinicio {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.carousel-item img {
+  height: 400px;      
+  object-fit: cover; 
+  width: 100%;
+}

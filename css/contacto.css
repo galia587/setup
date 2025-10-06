@@ -1,0 +1,47 @@
+.volverinicio {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+.formcontacto {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #d33ea1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.formcontacto label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.formcontacto input,
+.formcontacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formcontacto button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formcontacto button:hover {
+  background-color: #0056b3;
+}

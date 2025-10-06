@@ -1,0 +1,63 @@
+.volverinicio {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+.sobre-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.imagen {
+  background-image: url('../Imagenes/somos.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+.texto {
+  padding: 2rem 1.5rem;
+}
+
+.texto h2 {
+  color: #0077b6;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.texto p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .sobre-nosotros {
+    display: block;
+    margin: 1rem;
+  }
+
+  .imagen {
+    height: 200px;
+  }
+
+  .texto {
+    padding: 1rem;
+  }
+
+  .texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,233 @@
+
+.pagina {
+  min-height: 100vh; /*no quitar*/
+  background-image: url('../Imagenes/Principal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.titulo-header {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  font-size: 4vw;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  text-align: center;
+  display: block;
+  font-size: 4vw;
+  color: #eb9fc6;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgba(212, 208, 208, 0.7);
+  display: flex;
+    justify-content: flex-end;
+  align-items: center;
+  padding: 0.5em 1em;
+   position: relative;
+  z-index: 5;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+    justify-content: flex-end;
+  gap: 2vw;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ff69b4;
+}
+
+
+.menu-icon {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+ /* height: 100%; no me deja escrolear*/ 
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+ 
+}
+
+.background {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.logo-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: all 0.6s ease;
+  z-index: 2;
+}
+
+
+.logo-link:target {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+}
+
+
+.logo {
+  width: 100px;
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: auto;
+  display: none;
+}
+/*overlay solo cuadno este el logo en el centro*/
+.logo-link:target ~ .overlay {
+  display: block;
+  pointer-events: auto;
+}
+
+/*footer*/
+.footer {
+  width: 100%;
+  padding: 1em 0;
+  background-color: rgba(0, 0, 0, 0.6); /* respeta el fondo */
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+.social-links a {
+  color: #eb9fc6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff69b4;
+}
+/*fin footer*/
+
+
+@media (max-width: 600px) {
+  .logo {
+    width: 25vw;
+    max-width: 100px;
+  }
+
+  .logo-link:target {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+
+ 
+@media (max-width: 600px) {
+  .titulo-header {
+    font-size: 6vw;
+  }
+}
+}
+
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu li a {
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+  .titulo-header {
+    font-size: 7vw;
+  }
+
+  .titulo-header span {
+    font-size: 6vw;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .footer-content {
+    font-size: 0.9em;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
