@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set Up - Somos</title>
-     <link rel="stylesheet" href="./css/estilo.css">
-      <link rel="stylesheet" href="./css/somos.css">
+    <title>Set Up - Contacto</title>
+     <!-- <link rel="stylesheet" href="./css/estilo.css">
+      <link rel="stylesheet" href="./css/contacto.css"> -->
+      <link rel="stylesheet" href="../estilogeneral.css">
 </head>
 
 <body>
   <div> 
     <header>
-        <a  href="index.html" class="volverinicio">Inicio</a> 
+        <!-- <a  href="index.html" class="volverinicio">Inicio</a>  -->
         <div class="container"> 
                   
                 <a href="#logo" class="logo-link" id="logo">
-                <img src="./Imagenes/setup.jpg" alt="Logo Setup" class="logo">
+                <img src="../Imagenes/setup.jpg" alt="Logo Setup" class="logo">
                 </a>
                 <a href="#" class="overlay"></a> <!--vuelve el logo-->
                 <h1 class="titulo-header">Set Up<br><span>Espacio de Danzas</span></h1>
@@ -31,22 +32,27 @@
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="somos.html">¿Quiénes Somos?</a></li>
             <li><a href="presentaciones.html">Presentaciones</a></li>
+            <li><a href="../index.html">Inicio</a></li>
         </ul>
     </nav>
   </div>
+<main>  
+   <form class="formcontacto">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
 
-  <section class="sobre-nosotros">
-  <div class="imagen"></div>
-  <div class="texto">
-    <h2>Sobre Nosotros</h2>
-    <p>Set Up – Academia de baile es un espacio dedicado a la enseñanza y práctica de diferentes estilos de baile, ubicado en Maipú 1472, Gral. Roca, Río Negro, Argentina. La academia ofrece una amplia variedad de clases para bailarines de todos los niveles, desde principiantes hasta avanzados.</p>
-    <p>Nuestro equipo está formado por profesionales apasionados que combinan técnica, creatividad y compromiso. Creemos en el poder del cuerpo como herramienta de transformación y en el arte como forma de conexión.</p>
-    <p>No dudes en visitar Set Up si buscas aprender a bailar, mejorar tus habilidades existentes o simplemente disfrutar de la danza en un entorno divertido y profesional. ¡Te esperamos para que descubras el mundo del baile en nuestra academia!</p>
-  </div>
-</section>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
 
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="(011) 1234-5678">
 
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta..."></textarea>
 
+        <button type="submit">Enviar</button>
+    </form>
+</main>
   <footer class="footer">
       <div class="footer-content">
         <p>© 2025 Set Up - Espacio de Danzas</p>
@@ -58,6 +64,5 @@
       </div>
   </footer>
 </body>
-  
-  
+ 
 </html>
