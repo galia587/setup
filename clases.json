@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "slug": "hip-hop",
+    "titulo": "HIP HOP",
+    "descripcion": "La danza hip hop es una forma de baile urbano que se desarrolló a finales de la década de 1970. Estilo libre, improvisación y batallas; movimientos acrobáticos y de suelo.",
+    "profesor": "Juan",
+    "nivel": "Todos los niveles",
+    "horario": "Lunes 19:00 - 20:00",
+    "duracion": "60 min",
+    "precio": 1500,
+    "cupos": 12,
+    "imagen": "../Imagenes/3 HipHop.webp",
+    "buttonText": "Anotarme"
+  },
+  {
+    "id": 2,
+    "slug": "street",
+    "titulo": "STREET",
+    "descripcion": "Danza urbana originada en la calle; improvisación, interacción social y expresividad. Incluye b-boying, popping, breaking y waacking.",
+    "profesor": "María",
+    "nivel": "Intermedio",
+    "horario": "Miércoles 18:30 - 20:00",
+    "duracion": "90 min",
+    "precio": 1600,
+    "cupos": 10,
+    "imagen": "../Imagenes/1 Street.jpg",
+    "buttonText": "Reservar plaza"
+  },
+  {
+    "id": 3,
+    "slug": "contemporaneo",
+    "titulo": "CONTEMPORÁNEO",
+    "descripcion": "Surgida como reacción al ballet clásico; libertad de movimiento, improvisación y expresión personal.",
+    "profesor": "Pedro",
+    "nivel": "Avanzado",
+    "horario": "Viernes 17:00 - 18:30",
+    "duracion": "90 min",
+    "precio": 1800,
+    "cupos": 8,
+    "imagen": "../Imagenes/2 Contemporaneo.webp",
+    "buttonText": "Inscribirme"
+  }
+]

@@ -1,78 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set Up - Clases</title>
-     <!-- /*<link rel="stylesheet" href="./css/estilo.css">
-      <link rel="stylesheet" href="./css/clases.css">*/ -->
-    <link rel="stylesheet" href="../estilogeneral.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Set Up - Clases</title>
+  <link rel="stylesheet" href="../estilogeneral.css" />
 </head>
-
 <body>
-  <div> 
+  <div>
     <header>
-        <!-- <a  href="index.html" class="volverinicio">Inicio</a>  -->
-        <div class="container"> 
-                  
-                <a href="#logo" class="logo-link" id="logo">
-                <img src="../Imagenes/setup.jpg" alt="Logo Setup" class="logo">
-                </a>
-                <a href="#" class="overlay"></a> <!--vuelve el logo-->
-                <h1 class="titulo-header">Set Up<br><span>Espacio de Danzas</span></h1>
-        </div>
+      <div class="container">
+        <a href="#logo" class="logo-link" id="logo">
+          <img src="../Imagenes/setup.jpg" alt="Logo Setup" class="logo" />
+        </a>
+        <a href="#" class="overlay"></a>
+        <h1 class="titulo-header">Set Up<br><span>Espacio de Danzas</span></h1>
+      </div>
     </header>
 
     <nav class="navbar">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="menu">
-            <li><a href="clases.html">Clases</a></li>
-            <li><a href="horarios.html">Horarios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="somos.html">¿Quiénes Somos?</a></li>
-            <li><a href="presentaciones.html">Presentaciones</a></li>
-            <li><a href="../index.html">Inicio</a></li>
-        </ul>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="somos.html">¿Quiénes Somos?</a></li>
+        <li><a href="presentaciones.html">Presentaciones</a></li>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
     </nav>
   </div>
-<main>
-    <section class="estilo">
-      <div class="imagen" style="background-image: url('../Imagenes/3 HipHop.webp');"></div>
-      <div class="contenido">
-        <h2>HIP HOP</h2>
-        <p>La danza hip hop es una forma de baile urbano que se desarrolló a finales de la década de 1970 en Nueva York, específicamente en los barrios del Bronx y Brooklyn. Este estilo se caracteriza por su estilo libre, improvisación y competencias de baile conocidas como "batallas". Los bailarines utilizan movimientos acrobáticos y de suelo, sincronizados con el ritmo de la música hip hop. Hoy es un fenómeno global que influye en la cultura popular.</p>
-      </div>
+
+  <main>
+    <!-- Contenedor donde se inyectan las tarjetas de clases desde JSON -->
+    <section id="lista-clases" class="clases-grid" aria-live="polite">
+      <h2>Clases disponibles</h2>
     </section>
 
-    <section class="estilo">
-      <div class="imagen" style="background-image: url('../Imagenes/1 Street.jpg');"></div>
-      <div class="contenido">
-        <h2>STREET</h2>
-        <p>La danza callejera, también conocida como danza urbana, se originó en las calles y se caracteriza por la improvisación, interacción social y expresividad. Estilos como b-boying, popping, breaking y waacking reflejan la cultura del hip-hop y la diversidad urbana. Más que entretenimiento, es una forma de expresión cultural y política.</p>
-      </div>
-    </section>
-
-    <section class="estilo">
-      <div class="imagen" style="background-image: url('../Imagenes/2 Contemporaneo.webp');"></div>
-      <div class="contenido">
-        <h2>CONTEMPORÁNEO</h2>
-        <p>La danza contemporánea surgió a mediados del siglo XX como reacción al ballet clásico. Se caracteriza por la libertad de movimiento, la improvisación y la expresión personal, permitiendo a los bailarines comunicar emociones e ideas a través del cuerpo. Es una forma artística profundamente emocional y versátil.</p>
-      </div>
+    <section id="carrito" class="carrito">
+      <h2>Mi inscripción</h2>
+      <ul id="carrito-lista"></ul>
+      <p>Total de clases: <span id="carrito-total">0</span></p>
+      <button id="finalizar-btn">Finalizar inscripción</button>
     </section>
   </main>
 
-
   <footer class="footer">
-      <div class="footer-content">
-        <p>© 2025 Set Up - Espacio de Danzas</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com" target="_blank">Instagram</a>
-          <a href="https://www.youtube.com" target="_blank">YouTube</a>
-        </div>
+    <div class="footer-content">
+      <p>© 2025 Set Up - Espacio de Danzas</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com" target="_blank">YouTube</a>
       </div>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../aplica.js" type="module"></script>
+
+  
 </body>
- 
 </html>
