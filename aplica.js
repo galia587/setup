@@ -1,10 +1,10 @@
-// ../aplica.js
-const CLASSES_URL ='../clases.json'; // ajustar si lo movés
+
+const CLASSES_URL ='../clases.json'; 
 const CART_KEY = 'carrito';
 let clases = [];
 let carrito = JSON.parse(localStorage.getItem(CART_KEY)) || [];
 
-// Fetch y render
+// fetch y render
 export async function cargarClases() {
   try {
     const res = await fetch(CLASSES_URL);
@@ -59,12 +59,10 @@ function renderClases() {
   });
 }
 
-// Agregar al carrito con validación de cupos y evitar duplicados
 export function agregarClase(id) {
   const clase = clases.find(c => c.id === id);
   if (!clase) return;
 
-  // comprobar cupos restantes (local)
   const cuposElem = document.getElementById(`cupos-${id}`);
   const cuposActuales = parseInt(cuposElem?.textContent || clase.cupos, 10);
   if (cuposActuales <= 0) {
@@ -72,7 +70,6 @@ export function agregarClase(id) {
     return;
   }
 
-  // evitar duplicados en carrito
   if (carrito.some(item => item.id === id)) {
     Swal.fire({ title: 'Ya agregada', text: 'La clase ya está en tu inscripción.', icon: 'info', confirmButtonText: 'OK' });
     return;
@@ -81,7 +78,6 @@ export function agregarClase(id) {
   carrito.push({ id: clase.id, nombre: clase.titulo, precio: clase.precio });
   localStorage.setItem(CART_KEY, JSON.stringify(carrito));
 
-  // decrementar cupo en UI (solo local; si tenés backend, sincronizar)
   if (cuposElem) cuposElem.textContent = cuposActuales - 1;
 
   actualizarCarrito();
@@ -99,7 +95,7 @@ function actualizarCarrito() {
       li.innerHTML = `${c.nombre} - $${c.precio} <button class="quitar-btn" data-id="${c.id}">Quitar</button>`;
       lista.appendChild(li);
     });
-    // delegación para botones quitar
+
     lista.querySelectorAll('.quitar-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const id = parseInt(e.target.dataset.id, 10);
@@ -122,7 +118,7 @@ function quitarClase(id) {
   actualizarCarrito();
 }
 
-// Finalizar inscripción
+// fin inscripción
 function finalizarInscripcion() {
   if (carrito.length === 0) {
     Swal.fire({ title: 'Carrito vacío', text: 'No seleccionaste ninguna clase.', icon: 'warning', confirmButtonText: 'OK' });
@@ -138,14 +134,14 @@ function finalizarInscripcion() {
   }).then(() => {
     carrito = [];
     localStorage.removeItem(CART_KEY);
-    // opcional: recargar para restaurar cupos visuales desde JSON original
+   
     cargarClases();
   });
 }
 
 // Inicialización al cargar DOM
 document.addEventListener('DOMContentLoaded', () => {
-  // si este archivo se importa como módulo desde HTML, llamar a cargarClases
+  
   cargarClases();
   document.getElementById('finalizar-btn').addEventListener('click', finalizarInscripcion);
 });
